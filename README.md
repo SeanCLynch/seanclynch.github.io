@@ -5,7 +5,7 @@
 1. SC icon (photoshop)
 2. Add SC content (python)
 3. Push to github, adjust DNS (general)
-4. Write push script (bash)
+4. Write script (bash)
 
 ##Cron job must: 
 

@@ -25,19 +25,30 @@
 						$("#content ul.links").append(str);
 					});
 				});
-				$('.aggregator-btn').hide();
+				$('.aggregator').hide();
 				$('.portfolio').hide();
+				
+
 				$('.portfolio-btn').on('click', function () {
-					$('.portfolio-btn').hide();
+					$('.about').hide();
 					$('.portfolio').show();
-					$('.aggregator-btn').show();
 					$('.aggregator').hide();
+					$('.portfolio-btn').hide();
+					$('.aggregator-btn').show();
 				});
 				$('.aggregator-btn').on('click', function () {
-					$('.portfolio-btn').show();
+					$('.about').hide();
 					$('.portfolio').hide();
-					$('.aggregator-btn').hide();
 					$('.aggregator').show();
+					$('.portfolio-btn').show();
+					$('.aggregator-btn').hide();
+				});
+				$('.about-btn').on('click', function () {
+					$('.about').show();
+					$('.portfolio').hide();
+					$('.aggregator').hide();
+					$('.portfolio-btn').show();
+					$('.aggregator-btn').show();
 				});
 				// var colorit = function () {
 				// 	var links = document.getElementsByTagName("a");
@@ -160,7 +171,7 @@
 		<div class="top-bar" id="example-menu">
 		  <div class="top-bar-left">
 		    <ul class="dropdown menu" data-dropdown-menu>
-		      <li class="menu-text top-bar-title">Sean's Pub</li>
+		      <li class="menu-text top-bar-title"><a href="#" class="top-bar-item about-btn"><strong>Sean's Pub</strong></a></li>
 		      <li><a href="#" class="top-bar-item portfolio-btn">Portfolio</a></li>
 		      <li><a href="#" class="top-bar-item aggregator-btn">Aggregator</a></li>
 		      <!-- <li>
@@ -185,13 +196,25 @@
 		 <br>
 		 <br>
 		 <br>
-
-		 <div class="row">
+<!-- 
+		 <div class="row about">
 			<div id="content" class="small-8 small-centered columns">
-				<img class='hide-for-small-only' src='img/chameleon-name.png' style='width:256px;height:128px;float:left; margin-right: 15px;'></img>
+				<div class='text-center'><a href='#' class='aggregator-btn'>Aggregator</a></div>
+			</div>
+		</div> -->
+
+		 <div class="row about">
+			<div id="content" class="small-8 small-centered columns">
+				<img class='hide-for-small-only' src='img/chameleon-name.png' style='width:256px;height:128px;float:left; margin-right: 15px; margin-left: 15px;'></img>
 				<p class='section-content' style='margin: 15px 5px;'>Hey, my name is Sean. I design, build and study digital environments. I'm currently a senior at Upenn studying computer science and sociology. I love hiking, cartography, gaming and spending time with friends.</p>
 			</div>
 		</div>
+
+	<!-- 	<div class="row about">
+			<div id="content" class="small-8 small-centered columns">
+				<div class='text-center'><a href='#' class='portfolio-btn'>Portfolio</a></div>
+			</div>
+		</div> -->
 
 		<div class="row aggregator">
 			<div id="content" class="small-10 small-centered columns">

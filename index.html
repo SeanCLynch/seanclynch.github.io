@@ -15,33 +15,43 @@
 				$.getJSON('./data.json', function(data) {
 					$.each(data.content, function(index, link) {
 						if (link.type == "GH") {
-							var str = "<li><img class='hide-for-small-only icon' src='/img/github_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Github </span></li>";
+							var str = "<li><img class='hide-for-small-only icon' src='./img/github_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Github </span></li>";
 						} else if (link.type == "PB") {
-							var str = "<li><img class='hide-for-small-only icon' src='/img/pinboard_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Pinboard.in </span></li>";
+							var str = "<li><img class='hide-for-small-only icon' src='./img/pinboard_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Pinboard.in </span></li>";
 						} else if (link.type == "WP") {
-							var str = "<li><img class='hide-for-small-only icon' src='/img/wordpress_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Wordpress </span></li>";
+							var str = "<li><img class='hide-for-small-only icon' src='./img/wordpress_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Wordpress </span></li>";
 						}
 						
 						$("#content ul.links").append(str);
 					});
 				});
-				$('.aggregator').hide();
+				$('.about').hide();
 				$('.portfolio').hide();
+				$('.essays').hide();
 
 				$('.portfolio-btn').on('click', function () {
 					$('.about').hide();
 					$('.portfolio').show();
 					$('.aggregator').hide();
+					$('.essays').hide();
 				});
 				$('.aggregator-btn').on('click', function () {
 					$('.about').hide();
 					$('.portfolio').hide();
 					$('.aggregator').show();
+					$('.essays').hide();
 				});
 				$('.about-btn').on('click', function () {
 					$('.about').show();
 					$('.portfolio').hide();
 					$('.aggregator').hide();
+					$('.essays').hide();
+				});
+				$('.essays-btn').on('click', function () {
+					$('.about').hide();
+					$('.portfolio').hide();
+					$('.aggregator').hide();
+					$('.essays').show();
 				});
 				// var colorit = function () {
 				// 	var links = document.getElementsByTagName("a");
@@ -164,10 +174,11 @@
 		<div class="top-bar" id="example-menu">
 		  <div class="top-bar-left">
 		    <ul class="dropdown menu" data-dropdown-menu>
-		      <li class="menu-text top-bar-title"><a href="#" class="top-bar-item about-btn"><strong>Sean's Pub</strong></a></li>
+		      <li class="menu-text top-bar-title"><a href="#" class="top-bar-item aggregator-btn"><strong>Sean's Pub</strong></a></li>
+		      <li><a href="#" class="top-bar-item aggregator-btn">Link Aggregator</a></li>
+		      <li><a href="#" class="top-bar-item essays-btn">Essays</a></li>
 		      <li><a href="#" class="top-bar-item portfolio-btn">Portfolio</a></li>
-		      <li><a href="#" class="top-bar-item aggregator-btn">Aggregator</a></li>
-		      <li><a href="#" class="top-bar-item blog-btn">Blog Posts</a></li>
+		      <li><a href="#" class="top-bar-item about-btn">About</a></li>
 		      <!-- <li>
 		      	<a href="#" class="top-bar-item">Filter</a>
 		      	<ul class="menu vertical">
@@ -254,12 +265,10 @@
 			</div>
 		</div>
 
-		<div class="row portfolio">
-			<div id="blog" class="small-10 small-centered columns">
-				<div class='hide-for-small-only float-center' style='width: 700px; padding: 20px 5px 30px 5px;'>Here are some things I've written.</div>
-				<ul class="">
-					<!-- Content Goes Here -->
-				</ul>
+		<div class="row essays">
+			<div id="content" class="small-8 small-centered columns">
+				<!-- <img class='hide-for-small-only' src='img/chameleon-name.png' style='width:256px;height:128px;float:left; margin-right: 15px; margin-left: 15px;'></img> -->
+				<p class='section-content'>Here are some things I've written. EE, digital 3rd places, social scinence studio, senior thesis, witchcraft, kinky tribes?</p>
 			</div>
 		</div>
 

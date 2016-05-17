@@ -15,11 +15,13 @@
 				$.getJSON('./data.json', function(data) {
 					$.each(data.content, function(index, link) {
 						if (link.type == "GH") {
-							var str = "<li><img class='hide-for-small-only icon' src='./img/github_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Github </span></li>";
+							var str = "<li><img class='hide-for-small-only icon' src='./img/github_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='gh'>Github</span> " + link.date + " </span></li>";
 						} else if (link.type == "PB") {
-							var str = "<li><img class='hide-for-small-only icon' src='./img/pinboard_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Pinboard.in </span></li>";
+							var str = "<li><img class='hide-for-small-only icon' src='./img/pinboard_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='pb'>Pinboard.in</span> " + link.date + " </span></li>";
 						} else if (link.type == "WP") {
-							var str = "<li><img class='hide-for-small-only icon' src='./img/wordpress_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted " + link.date + " on Wordpress </span></li>";
+							var str = "<li><img class='hide-for-small-only icon' src='./img/wordpress_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='wp'>Wordpress</span> " + link.date + " </span></li>";
+						} else if (link.type == "SC") {
+							var str = "<li><img class='hide-for-small-only icon' src='./img/soundcloud_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='sc'>Soundcloud</span> " + link.date + " </span></li>";
 						}
 						
 						$("#content ul.links").append(str);
@@ -162,6 +164,18 @@
 				color: #7e7e7e;
 				margin-bottom: 5px;
 			}
+			.sc {
+				color: #FF5500;
+			}
+			.wp { 
+				color: #0073AA;
+			}
+			.pb {
+				color: #3975FA;
+			}
+			.gh {
+				color: #333333;
+			}
 		</style>
 	</head>
 	<body>
@@ -175,8 +189,8 @@
 		  <div class="top-bar-left">
 		    <ul class="dropdown menu" data-dropdown-menu>
 		      <li class="menu-text top-bar-title"><a href="#" class="top-bar-item aggregator-btn"><strong>Sean's Pub</strong></a></li>
-		      <li><a href="#" class="top-bar-item aggregator-btn">Link Aggregator</a></li>
-		      <li><a href="#" class="top-bar-item essays-btn">Essays</a></li>
+		      <li><a href="#" class="top-bar-item aggregator-btn">Personal Aggregator</a></li>
+		      <!-- <li><a href="#" class="top-bar-item essays-btn">Essays</a></li> -->
 		      <li><a href="#" class="top-bar-item portfolio-btn">Portfolio</a></li>
 		      <li><a href="#" class="top-bar-item about-btn">About</a></li>
 		      <!-- <li>

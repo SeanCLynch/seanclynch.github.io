@@ -4,14 +4,14 @@ Built using foundation for style and python scripts for content.
 
 ##TODOs: 
 
-1. Add SoundCloud: icon (photoshop), content (python).
+1. Add SoundCloud: icon (photoshop).
 2. Create cron job: run populateContent.py, push to github, email me results. (2/day?)
 3. Add 6x "essays" as pdfs: claim legal license.
 4. Blog on a schedule: 
 	* Mon: Paper Review
 	* Tues: Project Update
 	* Weds: Paper Review
-	* Thurs: 
+	* Thurs: Project Update
 	* Fri: Paper Review
 	* Sat: Project Update
 	* Sun: Personal Topic

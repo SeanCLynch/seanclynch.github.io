@@ -1,183 +1,24 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Sean's Pub | Welcome</title>
+		<title>Sean's Pub</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+		<meta content="utf-8" http-equiv="encoding" />
+
+		<!-- Style -->
 		<link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Merriweather:400, 400italic|Merriweather+Sans:400, 800|Oswald|Arvo' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	    <link rel="stylesheet" href="css/foundation.css" />
-    	<script src="js/vendor/jquery.min.js"></script>	
-	    <script src="js/foundation.min.js"></script>
-		<script>
-			$(function() {
-				$.getJSON('./data.json', function(data) {
-					$.each(data.content, function(index, link) {
-						if (link.type == "GH") {
-							var str = "<li><img class='hide-for-small-only icon' src='./img/github_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='gh'>Github</span> " + link.date + " </span></li>";
-						} else if (link.type == "PB") {
-							var str = "<li><img class='hide-for-small-only icon' src='./img/pinboard_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='pb'>Pinboard.in</span> " + link.date + " </span></li>";
-						} else if (link.type == "WP") {
-							var str = "<li><img class='hide-for-small-only icon' src='./img/wordpress_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='wp'>Wordpress</span> " + link.date + " </span></li>";
-						} else if (link.type == "SC") {
-							var str = "<li><img class='hide-for-small-only icon' src='./img/soundcloud_logo.png'/><a href='" + link.url + "'>" + link.title + "</a>" + "<br>" + "<span class='info'>Posted on <span class='sc'>Soundcloud</span> " + link.date + " </span></li>";
-						}
-						
-						$("#content ul.links").append(str);
-					});
-				});
-				$('.about').hide();
-				$('.portfolio').hide();
-				$('.essays').hide();
+	  <link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" href="css/custom.css" />
 
-				$('.portfolio-btn').on('click', function () {
-					$('.about').hide();
-					$('.portfolio').show();
-					$('.aggregator').hide();
-					$('.essays').hide();
-				});
-				$('.aggregator-btn').on('click', function () {
-					$('.about').hide();
-					$('.portfolio').hide();
-					$('.aggregator').show();
-					$('.essays').hide();
-				});
-				$('.about-btn').on('click', function () {
-					$('.about').show();
-					$('.portfolio').hide();
-					$('.aggregator').hide();
-					$('.essays').hide();
-				});
-				$('.essays-btn').on('click', function () {
-					$('.about').hide();
-					$('.portfolio').hide();
-					$('.aggregator').hide();
-					$('.essays').show();
-				});
-				// var colorit = function () {
-				// 	var links = document.getElementsByTagName("a");
-				// 	for (var i = 0; i < links.length; i++) {
-				// 		links[i].onmouseover = function (e) {
-				// 			var c = Math.floor((Math.random() * (3)) + 1);
-				// 			if (c == 1) {
-				// 				this.style['color'] = "#5CC4A9";//teal
-				// 			} else if (c == 2) {
-				// 				this.style['color'] = "#C36EBF";//purp
-				// 			} else if (c == 3) {
-				// 				this.style['color'] = "#C87B2C";//orange
-				// 			} else {
-				// 				this.style['color'] = "#B64952";//og link color
-				// 			}
-				// 		}
-				// 	}
-				// }
-				// colorit();
-			});
-			
-		</script>
-		<!-- #FAF3DD -->
-		<!-- C8D5B9 -->
-		<style>
-			body {
-				background: url("img/congruent_pentagon.png");
-			}
-			a {
-				color: black;
-			}
-			a:hover {
-				color: #68B0AB;
-			}
-			ul {
-				list-style: none;
-				margin-left: 0px;
-			}
-			#example-menu {
-				top: 0;
-				z-index: 1;
-				opacity: 0.97;
-				position: fixed;
-				width: 100%;
-				background-color: #f8f8f8;
-				-webkit-box-shadow: 0px -1px 30px 0px rgba(50, 50, 50, 0.75);
-				-moz-box-shadow:    0px -1px 30px 0px rgba(50, 50, 50, 0.75);
-				box-shadow:         0px -1px 30px 0px rgba(50, 50, 50, 0.75);
-			}
-			#content {
-				font-family: 'Arvo', sans-serif;
-				opacity: 0.85;
-				z-index: -999;
-				padding: 10px;
-				margin-bottom: 15px;
-				background: #fdfdfd;
-				border-radius: 8px;
-				-webkit-box-shadow: 6px 6px 37px -5px rgba(0,0,0,0.63);
-				-moz-box-shadow: 6px 6px 37px -5px rgba(0,0,0,0.63);
-				box-shadow: 6px 6px 37px -5px rgba(0,0,0,0.63);
-			}
-			#content ul li {
-				line-height: 1.4em;
-				padding-bottom: 3px;
-			}
-			.icon {
-				float: right;
-			}
-			.info {
-				font-family: 'Merriweather Sans', sans-serif;
-				vertical-align: super;
-				font-size: 0.75em;
-				color: #7e7e7e;
-			}
-			.top-bar a {
-				background-color: #f8f8f8;
-				color: black;
-			}
-			.top-bar a:hover {
-				color: #68B0AB;
-			}
-			.top-bar-title {
-				background-color: #f8f8f8;
-				font-family: 'Merriweather Sans', sans-serif;
-				font-weight: 800;
-			}
-			.top-bar-item {
-				background-color: #f8f8f8;
-				font-family: 'Merriweather Sans', sans-serif;
-				font-weight: 400;
-			}
-			.section-title {
-				font-family: 'Merriweather Sans', sans-serif;
-				font-weight: 800;
-			}
-			.section-content {
-				font-family: 'Merriweather', serif;
-				margin-bottom: 5px;
-				vertical-align: center;
-			}
-			.portfolio-title {
-				margin-bottom: 3px;
-			}
-			.portfolio-info {
-				font-family: 'Merriweather Sans', sans-serif;
-				vertical-align: super;
-				font-size: 0.75em;
-				color: #7e7e7e;
-				margin-bottom: 5px;
-			}
-			.sc {
-				color: #FF5500;
-			}
-			.wp { 
-				color: #0073AA;
-			}
-			.pb {
-				color: #3975FA;
-			}
-			.gh {
-				color: #333333;
-			}
-		</style>
+  	<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+		<script src="js/custom.js"></script>
 	</head>
+
 	<body>
 
 		<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
@@ -211,7 +52,7 @@
 		    </ul>
 		  </div> -->
 		</div>
-		 
+
 		 <br>
 		 <br>
 		 <br>
@@ -219,13 +60,13 @@
 		 <div class="row about">
 			<div id="content" class="small-8 small-centered columns">
 				<img class='hide-for-small-only' src='img/chameleon-name.png' style='width:256px;height:128px;float:left; margin-right: 15px; margin-left: 15px;'></img>
-				<p class='section-content' style='margin: 15px 5px;'>Hey, my name is Sean. I design, build and study digital environments. I just graduated from Upenn where I studied computer science and sociology. I love hiking, cartography, gaming and spending time with friends.</p>
+				<p class='section-content' style='margin: 15px 5px;'><strong>Hey, my name is Sean.</strong> I design, build and study digital environments. I just graduated from Upenn where I studied computer science and sociology. I love hiking, cartography, gaming and spending time with friends.</p>
 			</div>
 		</div>
 
 		<div class="row aggregator">
 			<div id="content" class="small-10 small-centered columns">
-				<div class='hide-for-small-only float-center' style='width: 700px; padding: 20px 5px 30px 5px;'>On tap below, you'll find my bookmarks, code and writings - mostly about technology.</div>
+				<div class='hide-for-small-only float-center' style='width: 700px; padding: 20px 5px 30px 5px;'><strong>Welcome!</strong> Below you'll find what I come across online. </div>
 				<ul class="links">
 					<!-- Content Goes Here -->
 				</ul>
@@ -234,8 +75,8 @@
 
 		<div class="row portfolio">
 			<div id="content" class="small-10 small-centered columns">
-				
-				<div class='hide-for-small-only float-center' style='width: 600px; padding: 20px 5px 30px 5px;'>Around the bar are some projects, experiments, and art I've worked on.</div>
+
+				<div class='hide-for-small-only float-center' style='width: 600px; padding: 20px 5px 30px 5px;'><strong>My portfolio</strong>, contains web development, design, HCI research, and art. </div>
 				<div class="section-content row small-up-1 medium-up-2 large-up-3">
 					<!-- PennApps Fellows -->
 				  <div class="column">
@@ -275,7 +116,7 @@
 				  	<div class='text-center portfolio-info'>FNAR 101 & Various</div>
 				    <img src="img/portfolio/flag_closeup.jpg" class="thumbnail" alt="">
 				  </div>
-				  
+
 				  <div class="column">
 				  	<div class='text-center portfolio-title'>Fantasy Cartography</div>
 				  	<div class='text-center portfolio-info'>Hobbyist</div>

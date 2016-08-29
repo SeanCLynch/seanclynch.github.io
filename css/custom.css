@@ -1,0 +1,102 @@
+/*
+<!-- #FAF3DD -->
+<!-- C8D5B9 -->
+*/
+
+body {
+  background: url("../img/congruent_pentagon.png");
+}
+a {
+  color: black;
+}
+a:hover {
+  color: #68B0AB;
+}
+ul {
+  list-style: none;
+  margin-left: 0px;
+}
+#example-menu {
+  top: 0;
+  z-index: 1;
+  opacity: 0.97;
+  position: fixed;
+  width: 100%;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0px -1px 30px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px -1px 30px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px -1px 30px 0px rgba(50, 50, 50, 0.75);
+}
+#content {
+  font-family: 'Arvo', sans-serif;
+  opacity: 0.85;
+  z-index: -999;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #fdfdfd;
+  border-radius: 8px;
+  -webkit-box-shadow: 6px 6px 37px -5px rgba(0,0,0,0.63);
+  -moz-box-shadow: 6px 6px 37px -5px rgba(0,0,0,0.63);
+  box-shadow: 6px 6px 37px -5px rgba(0,0,0,0.63);
+}
+#content ul li {
+  line-height: 1.4em;
+  padding-bottom: 3px;
+}
+.icon {
+  float: right;
+}
+.info {
+  font-family: 'Merriweather Sans', sans-serif;
+  vertical-align: super;
+  font-size: 0.75em;
+  color: #7e7e7e;
+}
+.top-bar a {
+  background-color: #f8f8f8;
+  color: black;
+}
+.top-bar a:hover {
+  color: #68B0AB;
+}
+.top-bar-title {
+  background-color: #f8f8f8;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 800;
+}
+.top-bar-item {
+  background-color: #f8f8f8;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+}
+.section-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 800;
+}
+.section-content {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 5px;
+  vertical-align: center;
+}
+.portfolio-title {
+  margin-bottom: 3px;
+}
+.portfolio-info {
+  font-family: 'Merriweather Sans', sans-serif;
+  vertical-align: super;
+  font-size: 0.75em;
+  color: #7e7e7e;
+  margin-bottom: 5px;
+}
+.sc {
+  color: #FF5500;
+}
+.wp {
+  color: #0073AA;
+}
+.pb {
+  color: #3975FA;
+}
+.gh {
+  color: #333333;
+}

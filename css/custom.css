@@ -100,6 +100,6 @@ ul {
 .gh {
   color: #333333;
 }
-.top-bar {
+div.top-bar, .top-bar-left {
 		background-color: #8BBA94;
 }
